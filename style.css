@@ -40,150 +40,34 @@ z-index:-3;
 
 }
 
-.floating-leaves span{
-    position: absolute;
-    display: block;
-    width: 90px;
-    height: 120px;
-    background: transparent;
-    animation: leafMove linear infinite;
-    opacity: 0.7;
+.floating-leaves{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
 }
 
-/* ساق السعفة */
-.floating-leaves span::before{
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: #0B5D1E;
-    transform: translateX(-50%);
+.palm{
+    position:absolute;
+    font-size:45px;
+    color:#0B5D1E;
+    opacity:.18;
+    animation:floatPalm linear infinite;
 }
 
-/*وريقات السعفه متحركه */
-.floating-leaves span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        -45deg,
-        transparent 0px,
-        transparent 6px,
-        #0B5D1E 6px,
-        #0B5D1E 8px
-    );
-    clip-path: ellipse(45% 50% at 50% 50%);
-    opacity: 0.9;
-}
+.palm1{left:8%;animation-duration:18s;}
+.palm2{left:28%;animation-duration:22s;font-size:55px;}
+.palm3{left:52%;animation-duration:20s;}
+.palm4{left:75%;animation-duration:24s;font-size:60px;}
+.palm5{left:90%;animation-duration:19s;}
 
-
-.floating-leaves span{
-
-position:absolute;
-
-display:block;
-
-width:30px;
-
-height:30px;
-
-background:rgba(27,94,32,0.8);
-
-border-radius:0 100% 0 100%;
-
-animation:leafMove linear infinite;
-
-}
-
-.floating-leaves span:nth-child(1){
-
-left:5%;
-
-animation-duration:18s;
-
-animation-delay:0s;
-
-}
-
-.floating-leaves span:nth-child(2){
-
-left:20%;
-
-animation-duration:22s;
-
-animation-delay:2s;
-
-}
-
-.floating-leaves span:nth-child(3){
-
-left:40%;
-
-animation-duration:16s;
-
-animation-delay:4s;
-
-}
-
-.floating-leaves span:nth-child(4){
-
-left:60%;
-
-animation-duration:20s;
-
-animation-delay:1s;
-
-}
-
-.floating-leaves span:nth-child(5){
-
-left:80%;
-
-animation-duration:24s;
-
-animation-delay:5s;
-
-}
-
-.floating-leaves span:nth-child(6){
-
-left:95%;
-
-animation-duration:19s;
-
-animation-delay:3s;
-
-}
-
-@keyframes leafMove{
-
-0%{
-
-transform:translateY(-120px) rotate(0deg);
-
-opacity:0;
-
-}
-
-20%{
-
-opacity:.8;
-
-}
-
-100%{
-
-transform:translateY(120vh) rotate(360deg);
-
-opacity:0;
-
-}
-
+@keyframes floatPalm{
+0%{transform:translateY(110vh) rotate(0deg);}
+100%{transform:translateY(-120px) rotate(360deg);}
 }
 
 /* الهيدر */
