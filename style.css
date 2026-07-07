@@ -62,7 +62,7 @@ z-index:-3;
     transform: translateX(-50%);
 }
 
-/*اوراق نخيل متحركه */
+/*وريقات السعفه متحركه */
 .floating-leaves span::after{
     content: "";
     position: absolute;
